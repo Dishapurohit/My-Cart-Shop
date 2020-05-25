@@ -1,28 +1,11 @@
+
 from django.shortcuts import render
-from django.http import HttpResponse
 
 # Create your views here.
-
-# def index(request):
-#     return HttpResponse("Index Shop")
+from django.http import HttpResponse
 
 def index(request):
-    return render(request,'Blog/index.html')
+    return render(request, 'Blog/index.html')
 
-def about(request):
-    return HttpResponse("about")
-
-def contact(request):
-    return HttpResponse("contact")
-
-def tracker(request):
-    return HttpResponse("tracker")
-
-def search(request):
-    return HttpResponse("search")
-
-def productview(request):
-    return HttpResponse("pv")
-
-def checkout(request):
-    return HttpResponse("checkout")
+def blogpost(request):
+    return render(request, 'Blog/blogpost.html')
