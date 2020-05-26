@@ -6,7 +6,7 @@ class Product(models.Model):
     product_name = models.CharField(max_length=50)
     category=models.CharField(max_length=50,default=" ")
     sub_category=models.CharField(max_length=50,default=" ")
-    price=models.IntegerField(max_length=50,default=" ")
+    price=models.IntegerField(default=" ")
     desc=models.CharField(max_length=1000)
     pub_date=models.DateField()
     image=models.ImageField(upload_to="Shop/images",default=" ")
@@ -27,6 +27,7 @@ class Contact(models.Model):
 class Order(models.Model):
     order_id = models.AutoField(primary_key=True)
     items_json = models.CharField(max_length=5000)
+    amount = models.IntegerField(default=0)
     name = models.CharField(max_length=90)
     email = models.CharField(max_length=111)
     address = models.CharField(max_length=111)
@@ -34,6 +35,7 @@ class Order(models.Model):
     state = models.CharField(max_length=111)
     zip_code = models.CharField(max_length=111)
     phone = models.CharField(max_length=111, default=" ")
+
 
 class OrderUpdate(models.Model):
     update_id = models.AutoField(primary_key=True)
