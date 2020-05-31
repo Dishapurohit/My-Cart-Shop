@@ -1,2 +1,2 @@
 # My-Cart-Shop
-This is an E-Commerce website basedcon Python programming by using Django Framework.
+This is an E-Commerce website based on Python programming by using Django Framework.
