@@ -1,6 +1,5 @@
-from django.contrib import admin
 from django.urls import path
-from .import views
+from . import views
 
 urlpatterns = [
     path('',views.index,name="Shop Home"),
@@ -10,4 +9,5 @@ urlpatterns = [
     path('search/',views.search,name="Search"),
     path('products/<int:myid>',views.productview,name="Product View"),
     path('checkout/',views.checkout,name="Check Out"),
+    path('handlerequest/',views.handlerequest,name="Handle Request")
 ]
